@@ -307,7 +307,7 @@
   // ou se souber o que está fazendo!
   function atualizarGrafico() {
     obterDadosGrafico();
-    setTimeout(atualizarGrafico, 10000);
+    setTimeout(atualizarGrafico, 2000);
   }
 
   //chama a atualização dos dois graficos no onload
@@ -316,7 +316,7 @@
     atualizarGraficoReal();
   }
 
-  setInterval(consultar_analitycs,10000);
+  setInterval(consultar_analitycs,3000);
 
   
   function consultar_analitycs() {
@@ -465,7 +465,7 @@ return false;
   // ou se souber o que está fazendo!
   function atualizarGraficoReal() {
     obterDadosGraficoReal();
-    setTimeout(atualizarGraficoReal, 3000);
+    setTimeout(atualizarGraficoReal, 2000);
   }
 
   // altere aqui as configurações do gráfico
@@ -602,13 +602,14 @@ return false;
     swal({
       title: frase,
       text: " ",
-      icon: "info",
-      timer: 600000,
+      icon: "warning",
+      buttons: false,
+      timer: 1000,
     });
   }
 
 
-  setTimeout(consultar_dados, 5000);
+  setTimeout(consultar_dados, 3000);
 
   function consultar_dados() {
         // guarda código do usuário que está no atributo usuario_bandtec
