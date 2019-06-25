@@ -103,7 +103,7 @@
                 <div id="list" class="row mt-5">
                     <div class="table-responsive col-md-12">
                         <table id="yourtable" class="table table-striped" cellspacing="0" cellpadding="0">
-                            <thead>
+                            <thead id="headtb" style="display: none">
                                 <tr>
                                     <!-- <th scope="col">ID</th> -->
                                     <th scope="col">Nome</th>
@@ -274,17 +274,19 @@
 
                     }
                     corpo_tabela.innerHTML = conteudo;
-                    
+                    headtb.style.display= "none";
+                    $('#tabela').dataTable({
+                        "language": {
+                            "url": "//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
+                        }
+                      });
+                    $('input[type="search"').attr('id', 'search');
+
                 });
             } else {
                 console.log('Erro de consulta!');
             }
         });
-
-        setTimeout(() => {
-                $('#yourtable').dataTable();
-                $('input[type="search"').attr('id', 'search');
-        }, 3000);
         return false;
     }
 
